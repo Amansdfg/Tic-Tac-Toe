@@ -20,8 +20,8 @@ html{
 body{
   background: radial-gradient(
       circle at top,
-      rgba(241, 210, 70, 0.98),
-      rgba(250, 176, 103, 0.87)
+      rgba(23, 12, 250, 0.88),
+      rgba(25, 76, 233, 0.87)
     ),
     url('bg-pattern-dark.png');
   background-repeat: repeat;
@@ -52,7 +52,7 @@ h1 {
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 6px;
-  background: linear-gradient(#383624, #282617);
+  background: linear-gradient(#121212, #221212);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
 }
@@ -241,7 +241,7 @@ ol {
 
 #log {
   max-width: 20rem;
-  color: #3f3b00;
+  color: #000000;
   list-style: none;
   margin: 2rem auto;
   padding: 0;
@@ -253,38 +253,6 @@ ol {
   animation: slide-in-from-left 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   margin: 0.75rem;
 }
-
-#log li.highlighted {
-  background-color: #3f3b00;
-  color: white;
-}
-
-#game-hints {
-  text-align: center;
-  color: #46432f;
-}
-
-#game-hints h2 {
-  font-family: 'Caprasimo', cursive;
-  font-size: 2rem;
-  margin: 0;
-}
-
-#game-hints ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#game-hints button {
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  color: #23221f;
-  font: inherit;
-  margin-top: 1.5rem;
-}
-
 @keyframes slide-in-from-left {
   0% {
     opacity: 0;
@@ -347,5 +315,50 @@ ol {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width:600px){
+  #game-container{
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  header img{
+    width: 5rem;
+  }
+  #game-board button{
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+  #players button {
+    width: 3rem;
+  }
+  .player-name{
+    width: 5rem;
+  }
+  .player input{
+    width: 5rem;
+    font-size: 0.75rem;
+  }
+  .player-name{
+    font-size: 0.75rem;
+  }
+  #players{
+    gap:1rem;
+  }
+  .player{
+    padding: 0.2rem;
+  }
+  .player-symbol{
+    margin-left: 0.2rem;
+  }
+  body{
+    background-size: 100% 100%, 50% 10%;
+  }
+  #game-over h2{
+    font-size: 2rem;
   }
 }
