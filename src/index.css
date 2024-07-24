@@ -18,13 +18,8 @@ html{
 }
 
 body{
-  background: radial-gradient(
-      circle at top,
-      rgba(23, 12, 250, 0.88),
-      rgba(25, 76, 233, 0.87)
-    );
   background-repeat: repeat;
-  background-size: 100% 100%, 30% 30%, 100% 100%;
+  background-size: 100% 100%, 30% 30%;
   min-height: 110rem;
 }
 
@@ -252,6 +247,13 @@ ol {
   animation: slide-in-from-left 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   margin: 0.75rem;
 }
+.back{
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000000;
+  margin: 2rem;
+}
+
 @keyframes slide-in-from-left {
   0% {
     opacity: 0;
@@ -359,5 +361,9 @@ ol {
   }
   #game-over h2{
     font-size: 2rem;
+  }
+  .back{
+    font-size: 1rem;
+    display: flex;
   }
 }
