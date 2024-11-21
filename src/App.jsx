@@ -4,6 +4,7 @@ import {useState} from "react";
 import Log from "./components/Log.jsx";
 import { WINNING_COMBITNATION } from "./Winning_combination.js";
 import GameOver from "./components/GameOver.jsx";
+import Header from "./components/Header.jsx";
 const initialValue=[
   [null,null,null],
   [null,null,null],
@@ -87,6 +88,8 @@ function App(){
     })
   }
   return(
+    <>
+    <Header/>
     <main>
       <div id="game-container">
         <ol id="players" className="highlight-player">
@@ -98,6 +101,7 @@ function App(){
       </div>
       <Log turns={turns}/>
     </main>
+    </>
   )
 }
 export default App;
